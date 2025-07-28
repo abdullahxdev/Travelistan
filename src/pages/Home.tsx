@@ -21,27 +21,28 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative h-96 bg-cover bg-center flex items-center justify-center text-white"
+      <section className="relative h-[60vh] min-h-[400px] bg-cover bg-center flex items-center justify-center text-white"
         style={{ backgroundImage: `url(${GhizerImage})` }}>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative text-center px-4">
-          <h2 className="text-5xl font-bold mb-4">Discover Northern Pakistan</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+        <div className="relative text-center px-4 w-full max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-4xl font-bold mb-3">
+            Discover Northern Pakistan
+          </h2>
+          <p className="text-base sm:text-lg mb-4 max-w-xl mx-auto">
             Explore the breathtaking beauty of Pakistan's northern regions - from majestic valleys to towering peaks
           </p>
-          <div className="flex items-center justify-center space-x-4 flex-wrap">
-            <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2 mb-2">
-              <MapPin className="h-5 w-5" />
-              <span>15+ Destinations</span>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center space-x-1 bg-white bg-opacity-20 rounded-md px-3 py-1">
+              <MapPin className="h-4 w-4" />
+              <span className="text-sm">15+ Destinations</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2 mb-2">
-              <Users className="h-5 w-5" />
-              <span>5000+ Travelers</span>
+            <div className="flex items-center space-x-1 bg-white bg-opacity-20 rounded-md px-3 py-1">
+              <Users className="h-4 w-4" />
+              <span className="text-sm">5000+ Travelers</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white bg-opacity-20 rounded-lg px-4 py-2 mb-2">
-              <Camera className="h-5 w-5" />
-              <span>10k+ Photos</span>
+            <div className="flex items-center space-x-1 bg-white bg-opacity-20 rounded-md px-3 py-1">
+              <Camera className="h-4 w-4" />
+              <span className="text-sm">10k+ Photos</span>
             </div>
           </div>
         </div>
@@ -72,8 +73,8 @@ const Home = () => {
                   <button
                     onClick={() => toggleFavorite(destination.id)}
                     className={`p-2 rounded-full ${favorites.includes(destination.id)
-                        ? 'bg-red-500 text-white'
-                        : 'bg-white bg-opacity-80 text-gray-700 hover:bg-opacity-100'
+                      ? 'bg-red-500 text-white'
+                      : 'bg-white bg-opacity-80 text-gray-700 hover:bg-opacity-100'
                       } transition-colors`}
                   >
                     <Heart className="h-4 w-4" />
@@ -172,10 +173,10 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-<section 
-  className="bg-cover bg-center text-white py-16"
-  style={{ backgroundImage: `url(${HarmoshValley})` }}
->        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="bg-cover bg-center text-white py-16"
+        style={{ backgroundImage: `url(${HarmoshValley})` }}
+      >        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold mb-2">15+</div>
